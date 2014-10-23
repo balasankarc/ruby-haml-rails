@@ -1,0 +1,5 @@
+ruby-haml-rails (0.5.3-1) UNRELEASED; urgency=medium
+
+  * Initial release (Closes: #758242)
+
+ -- Balasankar C <balasankarc@autistici.org>  Fri, 24 Oct 2014 00:57:23 +0530
