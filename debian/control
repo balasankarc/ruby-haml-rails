@@ -3,8 +3,8 @@ Section: ruby
 Priority: optional
 Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Uploaders: Balasankar C <balasankarc@autistici.org>
-Build-Depends: debhelper (>= 7.0.50~), gem2deb, rake
-Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 7.0.50~), gem2deb, rake, rails, ruby-test-unit
+Standards-Version: 3.9.6
 Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/ruby-haml-rails.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-ruby-extras/ruby-haml-rails.git;a=summary
 Homepage: http://github.com/indirect/haml-rails
@@ -14,7 +14,9 @@ XS-Ruby-Versions: all
 Package: ruby-haml-rails
 Architecture: all
 XB-Ruby-Versions: ${ruby:Versions}
-Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter
-# haml (< 5.0, >= 3.1), activesupport (>= 4.0.1), actionpack (>= 4.0.1), railties (>= 4.0.1), rails (>= 4.0.1, development), bundler (~> 1.2, development), rake (>= 0, development), appraisal (>= 0.3.8, development)
-Description: let your Gemfile do the configuring
- Haml-rails provides Haml generators for Rails 3. It also enables Haml as the templating engine for you, so you don't have to screw around in your own application.rb when your Gemfile already clearly indicated what templating engine you have installed. Hurrah.
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter, ruby-haml, ruby-activesupport, ruby-actionpack, ruby-railties, ruby-rails
+Description: Haml Generator for Rails 3
+ Haml-rails provides Haml generators for Rails 3. It also enables Haml as the 
+ templating engine for you, so you don't have to screw around in your own 
+ application.rb when your Gemfile already clearly indicated what templating 
+ engine you have installed. Hurrah.
