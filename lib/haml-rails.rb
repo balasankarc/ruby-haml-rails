@@ -1,5 +1,6 @@
 require 'haml'
 require 'rails'
+require 'haml/railtie'
 
 module Haml
   module Rails
@@ -40,6 +41,16 @@ module Haml
               # likely this version of Rails doesn't support dependency tracking
               # so, we can't parse haml templates without 'cache_digests' gem anyway :)
             end
+          end
+        end
+      end
+
+      # Configure source annoatation on haml files (support for HAML was
+      # provided directly by railties 3.2..4.1 but was dropped in 4.2.
+      if Gem::Requirement.new(">= 4.2").satisfied_by?(Gem::Version.new(::Rails.version))
+        initializer 'haml_rails.configure_source_annotation' do
+          SourceAnnotationExtractor::Annotation.register_extensions('haml') do |tag|
+            /\s*-#\s*(#{tag}):?\s*(.*)/
           end
         end
       end
