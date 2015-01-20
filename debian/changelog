@@ -1,3 +1,9 @@
+ruby-haml-rails (0.7.0-1) unstable; urgency=medium
+
+  * Upstream update
+
+ -- Balasankar C <balasankarc@autistici.org>  Tue, 20 Jan 2015 22:48:53 +0530
+
 ruby-haml-rails (0.5.3-1) unstable; urgency=medium
 
   * Initial release (Closes: #758242)
