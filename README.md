@@ -1,6 +1,6 @@
 # Haml-rails
 
-Haml-rails provides Haml generators for Rails 3. It also enables Haml as the templating engine for you, so you don't have to screw around in your own application.rb when your Gemfile already clearly indicated what templating engine you have installed. Hurrah.
+Haml-rails provides Haml generators for Rails 4. It also enables Haml as the templating engine for you, so you don't have to screw around in your own application.rb when your Gemfile already clearly indicated what templating engine you have installed. Hurrah.
 
 To use it, add this line to your Gemfile:
 
@@ -12,6 +12,26 @@ This ensures that:
   * Haml templates will be respected by the view template cache digestor
 
 Pretty fancy, eh? The modern world is just so amazing.
+
+### Converting Rails application layout file to haml format
+
+Once Haml-rails is installed on the Rails application,
+you can convert the erb layout file, `app/views/layouts/application.html.erb`
+to `app/views/layouts/application.html.haml` using this command:
+
+    $ rails generate haml:application_layout convert
+
+After the application layout file is converted successfully,
+make sure to delete `app/views/layouts/application.html.erb`, so Rails can
+start using `app/views/layouts/application.html.haml` instead.
+
+### Older versions of Rails
+
+The current version of Haml-rails requires 4.0.1 or later.
+
+Haml-rails version 0.4 is the last version to support Rails 3. To use it, add this line to your Gemfile:
+
+    gem "haml-rails", "~> 0.4.0"
 
 ### Contributors
 
