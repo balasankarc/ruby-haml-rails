@@ -1,14 +1,14 @@
 --- !ruby/object:Gem::Specification
 name: haml-rails
 version: !ruby/object:Gem::Version
-  version: 0.7.0
+  version: 0.8.2
 platform: ruby
 authors:
 - André Arko
 autorequire: 
 bindir: bin
 cert_chain: []
-date: 2015-01-12 00:00:00.000000000 Z
+date: 2015-01-28 00:00:00.000000000 Z
 dependencies:
 - !ruby/object:Gem::Dependency
   name: haml
@@ -175,6 +175,7 @@ files:
 - lib/haml-rails.rb
 - lib/haml-rails/version.rb
 - lib/rails/generators/haml/application_layout/application_layout_generator.rb
+- lib/tasks/erb2haml.rake
 - test/fixtures/routes.rb
 - test/lib/generators/haml/controller_generator_test.rb
 - test/lib/generators/haml/mailer_generator_test.rb
