@@ -4,15 +4,12 @@ require 'haml/railtie'
 
 module Haml
   module Rails
+    class Engine < ::Rails::Engine
+    end
     class Railtie < ::Rails::Railtie
-      if ::Rails.version.to_s >= "3.1"
-        config.app_generators.template_engine :haml
-      else
-        config.generators.template_engine :haml
-      end
+      config.app_generators.template_engine :haml
 
       config.before_initialize do
-        Haml.init_rails(binding)
         Haml::Template.options[:format] = :html5
       end
 
