@@ -1,3 +1,9 @@
+ruby-haml-rails (0.9.0-1) experimental; urgency=medium
+
+  * Upstream update 
+
+ -- Balasankar C <balasankarc@autistici.org>  Tue, 24 Mar 2015 17:05:18 +0530
+
 ruby-haml-rails (0.8.2-1) experimental; urgency=medium
 
   * Upstream update
